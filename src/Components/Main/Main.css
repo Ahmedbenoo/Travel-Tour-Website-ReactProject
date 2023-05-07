@@ -1,0 +1,153 @@
+
+:root{
+    --primaryColor: hsl(199,100%,33%);
+    --secondaryColor: hsl(187,85%,43%);
+    --gradiantColor:linear-gradient(to right,hsl(187,85%,43%),hsl(199,100%,33%));
+    --whiteColor: hsl(0,0%,100%);
+    --blackColor: hsl(201,33%,16%);
+    --textColor: hsl(240,4%,36%);
+    --whiteColorDeam: hsl(0,0%,93%);
+    --grayText:rgba(190,190,190);
+    --inputColor: rgba(239,239,239);
+    --bodyColor: rgba(240,240,246);
+    --cardBG: rgba(225,225,235);
+  }
+  .main{
+    width: 100%;
+  }
+  .sectitle .title{
+    position: relative;
+    width: max-content;
+    color: var(--textColor);
+    margin: 1rem 0;
+    z-index: 2;
+  }
+  .sectitle .title::after{
+    position: absolute;
+    content: "";
+    width: 120px;
+    background-color: var(--secondaryColor);
+    height: 3px;
+    right: 0;
+    bottom: 2px;
+    z-index: -1;
+  }
+  .secContent{
+    justify-content: center;
+    gap: 2rem;
+  }
+  .singledestination{
+    height: auto;
+    display: grid;
+    align-items: center;
+    border-radius: 10px;
+    background-color: var(--cardBG);
+    box-shadow: 0 2px 4px rgba(140,140,141,0.5);
+    overflow: hidden;
+  }
+  .singledestination:hover{
+    background-color:var(--bodyColor);
+    box-shadow: 0 2px 4px rgba(140,140,141,0.5);
+    transform: .3s ease;
+  }
+  .imagediv{
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+  }
+  .imagediv img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.2s ease;
+  }
+  .imagediv img:hover{
+    transform: scale(1.1);
+  }
+  .cardInfo{
+    padding: 1rem .5rem;
+  }
+  .dsetitle{
+    color: var(--blackColor);
+    font-size: 1.25rem;
+  }
+  .containt{
+    gap: .5rem;
+  }
+  .containt .icon{
+    margin-left: 0 !important;
+    color: var(--textColor) !important;
+    font-size: 18px;
+  }
+  .name{
+    color: var(--textColor);
+    font-weight: 400;
+    font-size: 14px;
+  }
+  .fees{
+    width: 100%;
+    justify-content: space-between;
+    padding: .5rem;
+    margin: 1rem 0;
+    border-top: 1.5px solid var(--grayText);
+    border-bottom: 1.5px solid var(--grayText);
+  }
+  .grade{
+    color: var(--textColor);
+    max-width: 100px;
+    line-height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .grade small{
+    padding: 1px 10px;
+    font-size: 10px;
+    background-color: var(--primaryColor);
+    border-radius: 1rem;
+    text-align: center;
+    color: #fff;
+    margin-left: 5px;
+  }
+  .price{
+    font-size: 1.8rem;
+    color: var(--blackColor);
+  }
+  .desc{
+    color: var(--textColor);
+    font-size: 13px;
+    font-weight: 500;
+  }
+  .btn{
+    margin-top: 1rem;
+    color: #fff !important;
+    justify-content: space-between;
+    gap: .5rem;
+    font-weight: 600;
+  }
+  .btn .icon{
+    color: #fff !important;
+    font-size: 18px;
+  }
+
+/* MEDIA QUERIES ======================= */
+
+@media(min-width:500px){
+  .title{
+    font-size: 1.5rem;
+  }
+  .title::after{
+    width:155px !important;
+  }
+  .secContent{
+    grid-template-columns: repeat(2,1fr);
+  }
+  .singledestination{
+    height: auto;
+  }
+}
+@media(min-width:990px){
+  .secContent{
+    grid-template-columns: repeat(3,1fr);
+  } 
+}

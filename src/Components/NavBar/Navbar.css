@@ -1,0 +1,153 @@
+:root{
+    --primaryColor: hsl(199,100%,33%);
+    --secondaryColor: hsl(187,85%,43%);
+    --gradiantColor:linear-gradient(to right,hsl(187,85%,43%),hsl(199,100%,33%));
+    --whiteColor: hsl(0,0%,100%);
+    --blackColor: hsl(201,33%,16%);
+    --textColor: hsl(240,4%,36%);
+    --whiteColorDeam: hsl(0,0%,93%);
+    --grayText:rgba(190,190,190);
+    --inputColor: rgba(239,239,239);
+    --bodyColor: rgba(240,240,246);
+    --cardBG: rgba(225,225,235);
+  }
+
+.header{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem;
+    z-index: 100;
+    background-color: var(--whiteColorDeam);
+    box-shadow: 0 2px 4px rgba(2,15,29,0.4);
+    z-index: 10000;
+  }
+  .logo{
+    color: var(--blackColor);
+    font-weight: 600;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  .icon{
+   font-size: 25px;
+   color: var(--primaryColor);
+  }
+  .toggleNavbar .icon{
+     font-size: 25px;
+     color: var(--primaryColor);
+  }
+  .toggleNavbar .icon:hover{
+    color: var(--secondaryColor);
+  }
+  @media(max-width:767px){
+    .navBar{
+        position: absolute;
+        background-color: var(--whiteColorDeam);
+        width: 80%;
+        height: max-content;
+        border-radius: 1rem;
+        top: -500rem;
+        left: 50%;
+        padding: 1rem;
+        transform: translate(-50%);
+        z-index: 2000;
+        transition: .1s ease-in-out;
+        box-shadow: 0 2px 4px rgba(2,15,29,0.6);
+    }
+    .activeNavbar{
+      top: 7rem;
+    }
+   
+    .navLists{
+        display: flex;
+        flex-direction: column;
+        padding: .5rem 0;
+        margin: auto;
+    }
+    .navItem{
+        padding: .5rem 0;
+    }
+    .navLink{
+        color:var(--textColor);
+        font-size: .9rem;
+        font-weight: 600;
+        
+    }
+    .navLink:hover{
+        color: var(--primaryColor);
+    }
+    .btn{
+        margin-top: .8rem;
+        
+    }
+    .btn a{
+        color:var(--whiteColor);
+        font-weight: 600;
+      }
+      .closevanbar{
+        position: absolute;
+        top: 1rem;
+        right: 1.5rem;
+        color: var(--primaryColor);
+      }
+      .closevanbar:hover{
+        color: var(--secondaryColor);
+      }
+  }
+  
+  @media(min-width:768px){
+    .closevanbar,.toggleNavbar{
+      display: none;
+    }
+    .header{
+      padding: 1.5rem 2rem;
+    }
+    .navLists{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      
+    }
+    .navItem{
+      padding-top: 15px !important;
+      font-weight: 500;
+      padding: 0 .45rem;
+      font-size: .9rem;
+    }
+    
+    .navItem a{
+      color: var(--textColor);
+    }
+    .navItem a:hover{
+      color: var(--primaryColor);
+    }
+    .navItem .active{
+      color: var(--primaryColor) ;
+    }
+    .btn{
+      margin-left: 1rem;
+      top: 0;
+    }
+  }
+  @media(max-width:792px){
+    .header{
+      padding: 1.5rem 1rem !important;
+    }
+  
+  }
+  @media(min-width:960px){
+    .navItem{
+      padding:0 .8rem !important;
+      padding-top: 15px !important;
+    }
+  }
+  @media(min-width:1240px){
+    .header{
+      padding:1rem 5rem;
+    }
+  }

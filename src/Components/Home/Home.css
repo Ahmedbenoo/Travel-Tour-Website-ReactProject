@@ -1,0 +1,188 @@
+:root{
+    --primaryColor: hsl(199,100%,33%);
+    --secondaryColor: hsl(187,85%,43%);
+    --gradiantColor:linear-gradient(to right,hsl(187,85%,43%),hsl(199,100%,33%));
+    --whiteColor: hsl(0,0%,100%);
+    --blackColor: hsl(201,33%,16%);
+    --textColor: hsl(240,4%,36%);
+    --whiteColorDeam: hsl(0,0%,93%);
+    --grayText:rgba(190,190,190);
+    --inputColor: rgba(239,239,239);
+    --bodyColor: rgba(240,240,246);
+    --cardBG: rgba(225,225,235);
+  }
+
+
+
+
+  .Home{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+   
+  }
+  .overLay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(47,106,127);
+    mix-blend-mode: hard-light;
+    z-index: 1;
+  }
+
+  video{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    object-fit: cover;
+  }
+  .homeContent{
+    width: 100%;
+    height: max-content;
+    padding: 8rem 1.5rem 3rem;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+    align-items: stretch;
+    justify-content: center;
+    margin: auto;
+    color: var(--whiteColor);
+    z-index: 10;
+  }
+  .homeContent .textDiv{
+    padding: 2rem 0;
+  }
+  .homeContent .smallText{
+    font-size: 15px;
+    text-transform: uppercase;
+  }
+  .homeContent .homeTittle{
+    position: relative;
+    font-size: 1.8rem;
+   
+  }
+  .cardDiv{
+    position: relative;
+    background-color: var(--whiteColor);
+    border-radius: 10px;
+    padding: 2.5rem 1rem;
+    gap: 1rem;
+    
+  }
+  label{
+    display: block;
+    color: var(--textColor);
+    padding-bottom: 10px;
+    font-size: 15px;
+    font-weight:600;
+  }
+  .label_total{
+    justify-content: space-between;
+    align-items: center;
+
+  }
+  .total{
+    color: var(--textColor);
+    padding-bottom: 10px;
+    font-size: 18px;
+  }
+  .input{
+    height: 40px;
+    padding: 0 1rem;
+    background-color: var(--inputColor);
+    border-radius: 3rem;
+  }
+  .input input{
+    width: 100%;
+    background: none;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    font-size: 13px;
+  }
+  .icon{
+    color: var(--primaryColor) !important;
+    margin-left: 10px;
+    font-size: 18px;
+  }
+  .searchoptions{
+    position: absolute;
+    background-color: var(--primaryColor);
+    padding: .4rem 1rem;
+    bottom: -1rem;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 3rem;
+    column-gap: .8rem;
+    cursor: pointer;
+  }
+  .searchoptions span{
+    font-size: 14px;
+  }
+  .searchoptions:hover{
+    background-color: var(--secondaryColor);
+  }
+  .searchoptions .icon,
+  .homefooterIcons .icon{
+    color: #fff !important;
+    cursor: pointer;
+  }
+  /* .searchoptions input[type=range]{
+    background-color: black !important;
+    color: black !important;
+  } */
+
+  .homefooterIcons{
+    justify-content: space-between;
+  }
+  .homefooterIcons .icon{
+    font-size: 18px;
+  }
+  .homefooterIcons .icon:hover{
+    color: var(--secondaryColor) !important;
+  }
+
+
+  @media (min-width:500px){
+    .smallText{
+      font-size: 16px !important;
+      
+    }
+    .homeTittle{
+      position: relative;
+      font-size: 2.2rem !important;
+      width: max-content;
+    }
+    .homeTittle::after{
+      position: absolute;
+      content: '';
+      width:145px;
+      height: 5px;
+      right: 0;
+      bottom: 0px;
+      background-color: var(--primaryColor);
+      z-index: -1;
+    }
+    .cardDiv{
+      grid-template-columns: repeat(2,1fr);
+    }
+  }
+  @media (min-width:690px){
+    .cardDiv{
+      grid-template-columns: repeat(3,1fr);
+    }
+  }
+  @media (min-width:1240px){
+    .homeContent{
+      padding-left:0 ;
+      padding-right: 0;
+    }
+  }

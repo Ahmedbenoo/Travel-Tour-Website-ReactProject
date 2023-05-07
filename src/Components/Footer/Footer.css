@@ -1,0 +1,216 @@
+:root{
+    --primaryColor: hsl(199,100%,33%);
+    --secondaryColor: hsl(187,85%,43%);
+    --gradiantColor:linear-gradient(to right,hsl(187,85%,43%),hsl(199,100%,33%));
+    --whiteColor: hsl(0,0%,100%);
+    --blackColor: hsl(201,33%,16%);
+    --textColor: hsl(240,4%,36%);
+    --whiteColorDeam: hsl(0,0%,93%);
+    --grayText:rgba(190,190,190);
+    --inputColor: rgba(239,239,239);
+    --bodyColor: rgba(240,240,246);
+    --cardBG: rgba(225,225,235);
+  }
+  .footer{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+  }
+  .videodiv{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  .videodiv video{
+    height: 100%;
+    object-fit: cover;
+  }
+  .videodiv::after{
+    position: absolute;
+    content: "";
+    background-color: rgba(0,0,0,.4);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  .footer .secContent{
+    width: 100%;
+    height: max-content;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    flex-direction: column;
+    row-gap: 2rem;
+    padding: 2rem initial;
+  }
+  .contactDiv{
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .text small{
+    font-size: 15px;
+    color: #fff;
+    font-weight: 500;
+  }
+  .text h2{
+    color: #fff;
+    font-size: 1.8rem;
+  }
+  .inputDiv{
+    width: 100%;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .inputDiv input{
+    width: 100%;
+    padding: .5rem .6rem;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 3rem;
+    outline: none;
+    font-size: 15px;
+  }
+  .inputDiv input::placeholder{
+    color: #fff;
+  }
+  .inputDiv .btn{
+    width: 100%;
+    justify-content: center;
+    font-weight: 500;
+    gap: .5rem;
+    font-size: 18px;
+  }
+  .inputDiv .icon{
+    font-size: 20px;
+  }
+  .footerCard{
+    width: 100%;
+    position: relative;
+    background-color: var(--whiteColor);
+    padding: 1rem 1rem 4rem;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+  .footerIntro{
+    flex-direction: column;
+    gap: .5rem;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .logo{
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--blackColor);
+  }
+  .logo .icon{
+    font-size: 35px;
+    color: var(--primaryColor);
+    margin-right: 10px;
+    margin-left: 0 !important;
+  }
+  .footerIntro p{
+    padding: .8rem;
+    font-size: 15px;
+    color: var(--textColor);
+  }
+  .footerSocial{
+    column-gap: .5rem;
+  }
+  .footerSocial .icon{
+    font-size: 25px;
+    color: var(--blackColor) !important;
+  }
+  .footerSocial .icon:hover{
+    color: var(--primaryColor) !important;
+  }
+  .footerLinks{
+    width: 100%;
+    gap: 1rem;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: space-between;
+    padding-left: 5px;
+  }
+  .groupTittle{
+    display: block;
+    color: var(--blackColor);
+    font-weight: 700;
+    font-size: 17px;
+    margin-bottom: .5rem;
+  }
+  .footerList{
+    color: var(--textColor) !important;
+    font-size: 16px !important;
+    font-weight: 500;
+    transform: .3s  ease-in-out;
+    
+  }
+  .footerList:hover{
+    color: var(--primaryColor) !important;
+    transform: translateX(7px);
+  }
+  .footerDiv{
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: .5rem 2rem;
+    background-color: var(--secondaryColor);
+  }
+  .footerDiv small{
+    font-size: 12px;
+    color: #fff;
+  }
+
+
+  @media(min-width:500px){
+    .footerLinks{
+      grid-template-columns: repeat(3,1fr);
+      padding-bottom: 3rem;
+    }
+    .footerDiv{
+      flex-direction: row;
+      justify-content: space-between;
+
+    }
+    .footerDiv small{
+      font-size: 14px;
+    }
+  }
+  @media(min-width:660px){
+    .contactDiv{
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .text{
+     display: flex;
+     flex-direction: column;
+    }
+    .inputDiv{
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+    
+    .contactDiv .inputDiv input{
+      width: 60%;
+      margin-top: 15px;
+    }
+    .contactDiv .btn{
+      width: max-content;
+    }
+  }
+  
